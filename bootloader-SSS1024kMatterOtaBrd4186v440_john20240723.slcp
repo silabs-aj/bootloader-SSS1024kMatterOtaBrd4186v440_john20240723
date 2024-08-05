@@ -1,0 +1,47 @@
+# Silicon Labs Project Configuration Tools: slcp, v0, Component selection file.
+project_name: bootloader-SSS1024kMatterOtaBrd4186v440_john20240723
+label: bootloader-SSS1024kMatterOtaBrd4186v440_john20240723
+description: |
+  This sample configuration of the Gecko bootloader configures the bootloader to use an external SPI flash to store firmware update images. The storage configuration is set up to store a single firmware update image at a time, in a single storage slot. The storage slot is configured to start at address 0x0 of the SPI flash, and have a size of 1024 kB. This can be configured on the "Storage" tab.
+category: Example|Bootloader
+filter:
+- name: Device Type
+  value: [SoC]
+- name: MCU
+  value: [Bootloader]
+- name: Project Difficulty
+  value: [Advanced]
+package: bootloader
+quality: production
+readme:
+- {path: readme.md}
+- {path: readme.md}
+tag: ['hardware:component:memory:spi']
+sdk: {id: gecko_sdk, version: 4.4.3}
+toolchain_settings: []
+component:
+- {id: EFR32MG24B210F1536IM48}
+- {id: bootloader_aes_sha_ecdsa}
+- {id: bootloader_common_storage_single}
+- {id: bootloader_core}
+- {id: bootloader_crc}
+- {id: bootloader_debug}
+- {id: bootloader_delay_driver}
+- {id: bootloader_image_parser}
+- {id: bootloader_spi_controller_driver}
+- {id: bootloader_spi_controller_eusart_driver}
+- {id: bootloader_spiflash_storage}
+- {id: bootloader_token_management}
+- {id: brd4002a}
+- {id: brd4186c}
+- {id: debug_swo}
+configuration:
+- {name: BTL_STORAGE_BASE_ADDRESS, value: '0'}
+- {name: SLOT0_ENABLE, value: '1'}
+- {name: SLOT0_START, value: '0'}
+- {name: SLOT0_SIZE, value: '1048576'}
+ui_hints:
+  highlight:
+  - {path: readme.md, focus: true}
+post_build: {path: bootloader-SSS1024kMatterOtaBrd4186v440_john20240723.slpb, profile: bootloader_series_2}
+

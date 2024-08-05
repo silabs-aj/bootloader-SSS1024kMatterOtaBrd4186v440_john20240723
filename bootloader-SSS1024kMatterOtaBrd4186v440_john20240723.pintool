@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="pin_tool.EFR32MG24B210F1536IM48" partId="mcu.arm.efr32.mg24.efr32mg24b210f1536im48" contextId="com.silabs.sdk.stack.super:4.4.3._-1478327823">
+  <mode name="DefaultMode">
+    <property object="DefaultMode" propertyId="mode.diagramLocation" value="100, 100"/>
+    <property object="EUSART1" propertyId="ABModule.selectedRequirement" value="eusart%T%SL_EUSART_EXTFLASH%T%btl_spi_controller_eusart_driver_cfg.h"/>
+    <property object="EUSART1" propertyId="ABPeripheral.included" value="true"/>
+    <property object="GPIO" propertyId="ABModule.selectedRequirement" value="gpio%T%SL_DEBUG%T%btl_debug_cfg.h"/>
+    <property object="GPIO" propertyId="ABPeripheral.included" value="true"/>
+    <property object="PC01" propertyId="pin.name" value=""/>
+    <property object="PC02" propertyId="pin.name" value=""/>
+    <property object="PC03" propertyId="pin.name" value=""/>
+    <property object="PC04" propertyId="pin.name" value=""/>
+    <property object="PORTIO" propertyId="portio.eusart1.enable.cs" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.eusart1.enable.rx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.eusart1.enable.sclk" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.eusart1.enable.tx" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.eusart1.location.cs" value="36"/>
+    <property object="PORTIO" propertyId="portio.eusart1.location.rx" value="34"/>
+    <property object="PORTIO" propertyId="portio.eusart1.location.sclk" value="35"/>
+    <property object="PORTIO" propertyId="portio.eusart1.location.tx" value="33"/>
+    <property object="PORTIO" propertyId="portio.gpio.enable.swv" value="Enabled"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.clk" value="35"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.cs" value="36"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.rx" value="34"/>
+    <property object="PORTIO" propertyId="portio.usart0.location.tx" value="33"/>
+    <property object="USART0" propertyId="ABModule.selectedRequirement" value="usart%T%SL_USART_EXTFLASH%T%btl_spi_controller_usart_driver_cfg.h"/>
+    <property object="USART0" propertyId="ABPeripheral.included" value="true"/>
+  </mode>
+  <modeTransition>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
+  </modeTransition>
+</device:XMLDevice>
